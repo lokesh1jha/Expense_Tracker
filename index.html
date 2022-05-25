@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+</head>
+<body>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+
+
+    <h1>Expense Tracker</h1>
+    <div class = "expense-tracker">
+        <form id="expForm">
+            <label for="amount">Enter Expense Amount </label>
+            <input type="text" name="amount" id="amount"/>
+            <label for="description">Enter Description </label>
+            <input type="text" name="description" id="description"/>
+            <label for="category">Choose Category</label>
+            <select id="category">
+                <option value="chooseOne">Choose one...</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Fun">Fun</option>
+                <option value="Food">Food</option>
+                <option value="Other">Other</option>
+            </select>
+            <button type="submit" id="submit" class="buttonSave" style="display: block;">Add expense</button>
+            <button id="savetask"  style="display: none;">Save expense</button>
+        </form>
+        <div class="element-list">
+            <ul id="list"></ul>
+        </div>
+            <br><br>
+            <section class="content">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseTable">
+        
+                    </tbody>
+                </table>
+            </section>
+            <script src="index.js"></script>
+    </div>
+    
+</body>
+</html>
