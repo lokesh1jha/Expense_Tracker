@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
 </head>
 <body>
 
@@ -27,10 +28,10 @@
     <div class = "expense-tracker">
         <form id="expForm">
             <label for="amount">Enter Expense Amount </label>
-            <input type="text" name="amount" id="amount"/>
+            <input type="text" class="amount" id="amount"/>
             <label for="description">Enter Description </label>
-            <input type="text" name="description" id="description"/>
-            <label for="category">Choose Category</label>
+            <input type="text" class="description" id="description"/>
+            <label for="category" class="category">Choose Category</label>
             <select id="category">
                 <option value="chooseOne">Choose one...</option>
                 <option value="Fuel">Fuel</option>
@@ -38,30 +39,16 @@
                 <option value="Food">Food</option>
                 <option value="Other">Other</option>
             </select>
-            <button type="submit" id="submit" class="buttonSave" style="display: block;">Add expense</button>
-            <button id="savetask"  style="display: none;">Save expense</button>
+            <button type="submit" id="submit" class="buttonSave" ">Add expense</button>
         </form>
-        <div class="element-list">
-            <ul id="list"></ul>
-        </div>
-            <br><br>
-            <section class="content">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Amount</th>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody id="expenseTable">
         
-                    </tbody>
+            <br><br>
+            <div class="content">
+                <table class="table">
+                   
                 </table>
-            </section>
-            <script src="index.js"></script>
+            </div>
+            <script src="apisupported.js"></script>
     </div>
     
 </body>

@@ -1,4 +1,7 @@
+//Local storage code
+
 document.getElementById('expForm').addEventListener('submit', addExpense);
+
 
 // initial array of expenses, reading from localStorage
 const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
